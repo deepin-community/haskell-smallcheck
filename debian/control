@@ -1,0 +1,79 @@
+Source: haskell-smallcheck
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Clint Adams <clint@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-logict-dev,
+ libghc-logict-prof,
+Build-Depends-Indep:
+ ghc-doc,
+ libghc-logict-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/Bodigrim/smallcheck
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-smallcheck
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-smallcheck]
+
+Package: libghc-smallcheck-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Another lightweight testing library${haskell:ShortBlurb}
+ SmallCheck is similar to QuickCheck (Claessen and Hughes 2000-) but
+ instead of testing for a sample of randomly generated values, SmallCheck
+ tests properties for all the finitely many values up to some depth,
+ progressively increasing the depth used.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-smallcheck-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: Another lightweight testing library${haskell:ShortBlurb}
+ SmallCheck is similar to QuickCheck (Claessen and Hughes 2000-) but
+ instead of testing for a sample of randomly generated values, SmallCheck
+ tests properties for all the finitely many values up to some depth,
+ progressively increasing the depth used.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-smallcheck-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: Another lightweight testing library${haskell:ShortBlurb}
+ SmallCheck is similar to QuickCheck (Claessen and Hughes 2000-) but
+ instead of testing for a sample of randomly generated values, SmallCheck
+ tests properties for all the finitely many values up to some depth,
+ progressively increasing the depth used.
+ .
+ ${haskell:Blurb}
