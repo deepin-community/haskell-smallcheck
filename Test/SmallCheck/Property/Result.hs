@@ -1,5 +1,8 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE Safe              #-}
+#if __GLASGOW_HASKELL__ >= 704
+{-# LANGUAGE Safe #-}
+#endif
 
 module Test.SmallCheck.Property.Result
   ( PropertySuccess(..)
@@ -13,7 +16,7 @@ import Text.PrettyPrint (Doc, empty, hsep, nest, render, text, (<+>), ($+$), ($$
 
 type Argument = String
 
--- | An explanation for the test outcome
+-- | An explanation for the test outcome.
 type Reason = String
 
 data PropertySuccess
